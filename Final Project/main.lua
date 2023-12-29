@@ -163,7 +163,7 @@ function resolveCollision()
             if player.prevX < platforms[i].x + platforms[i].width and player.prevX + player.width > platforms[i].x then
                 if player.y + player.height/2 < platforms[i].y + platforms[i].height/2 then
                     player.y = player.y - (player.y + player.height - platforms[i].y)
-                    if love.keyboard.isDown('up') then
+                    if love.keyboard.isDown('up') or love.keyboard.isDown('w') or love.keyboard.isDown('space') then
                         player.yVelocity = player.jumpSpeed
                     else
                         player.yVelocity = 200
